@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/emitens', 'emitenController@index')->name('emiten.index');
+Route::post('/emitens/save', 'emitenController@create')->name('emiten.create');
+
+Route::get('/history', 'historyController@index')->name('history.index');
+Route::post('/history/add', 'historyController@create')->name('history.add');
